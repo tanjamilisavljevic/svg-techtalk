@@ -1,0 +1,49 @@
+/* define new colors and asign them */
+
+:root{
+    --blue-color: rgba(125, 211, 220, 0.97);
+    --green-color: rgb(165, 232, 149)
+}
+
+svg{
+    cursor: pointer;
+}
+
+#greenArrows{
+    fill: var(--green-color);
+}
+#blueArrow{
+    fill: var(--blue-color);
+}
+
+/* animate all automatically when they change */
+
+#blue{
+    transition: all 1s ease;
+}
+#green2{
+    transition: all 1s ease;
+}
+#green1{
+    transition: all 1s ease;
+}
+
+/* change styling to make them automatically animate */
+#green1{
+    /* move it out of view to the left */
+    transform: translateX(-100px);
+
+}
+svg:hover #blue{
+    /* move to right */
+    transform: translateX(20%);
+}
+svg:hover #green2{
+    /* move to right and fade out */
+    transform: translateX(40%);
+    opacity: 0;
+}
+svg:hover #green1{
+    /* come into view */
+    transform: translateX(0);
+}
